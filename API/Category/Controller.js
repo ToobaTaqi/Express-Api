@@ -1,4 +1,4 @@
-const Category = require("./Model");
+const Category = require("./model");
 const { connect } = require("mongoose");
 require("dotenv").config();
 
@@ -18,7 +18,7 @@ const getAllCategories = async (req, res) => {
 };
 
 const getCategoryByID = async (req, res) => {
-  const { _id } = req.query;
+  const { _id } = req.query; //jo db k andr h wo wali id as a query recieve krenge
 
   try {
     await connect(process.env.MONGO_URI);
